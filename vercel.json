@@ -1,0 +1,11 @@
+{
+    "builds": [
+      { "src": "backend/server.js", "use": "@vercel/node" },
+      { "src": "clone/package.json", "use": "@vercel/static-build" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/backend/server.js" },
+      { "src": "/(.*)", "dest": "/clone/build/index.html" }
+    ]
+  }
+  
