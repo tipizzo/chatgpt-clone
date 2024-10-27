@@ -39,5 +39,6 @@ app.post('/api/completion', async (req, res) => {
     }
 });
 
-const PORT = 5000;
+PORT = process.env.PORT;
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
